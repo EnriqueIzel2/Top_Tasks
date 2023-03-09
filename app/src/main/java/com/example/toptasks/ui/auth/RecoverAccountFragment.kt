@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.toptasks.R
 import com.example.toptasks.databinding.FragmentRecoverAccountBinding
 
 class RecoverAccountFragment : Fragment() {
@@ -16,7 +15,7 @@ class RecoverAccountFragment : Fragment() {
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
-  ): View? {
+  ): View {
     _binding = FragmentRecoverAccountBinding.inflate(inflater, container, false)
 
     return binding.root
