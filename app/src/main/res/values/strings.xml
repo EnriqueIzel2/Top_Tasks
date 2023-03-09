@@ -10,4 +10,15 @@
     <string name="fragment_login_btn_login_text">Login</string>
     <string name="fragment_login_criar_conta_text">Criar conta</string>
     <string name="fragment_login_recuperar_senha_text">Recuperar senha</string>
+
+    <string name="fragment_recover_account_description">Informe seu e-mail cadastrado para receber o link de recuperação de senha</string>
+    <string name="fragment_recover_account_email_text">E-mail</string>
+    <string name="fragment_recover_account_email_hint">Digite seu e-mail</string>
+    <string name="fragment_recover_account_btn_getLink">Receber link</string>
+
+    <string name="fragment_register_email_text">E-mail</string>
+    <string name="fragment_register_email_hint">Digite seu e-mail</string>
+    <string name="fragment_register_password_text">Senha</string>
+    <string name="fragment_register_password_hint">Digite sua senha</string>
+    <string name="fragment_register_btn_createAccount">Criar conta</string>
 </resources>
