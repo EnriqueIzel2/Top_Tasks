@@ -15,4 +15,9 @@
 
         <item name="android:windowBackground">@color/default_color</item>
     </style>
+
+    <style name="CustomTabLayout" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
