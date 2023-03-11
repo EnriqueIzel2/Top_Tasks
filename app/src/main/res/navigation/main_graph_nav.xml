@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph_nav"
     app:startDestination="@id/splashFragment">
@@ -9,12 +9,15 @@
         android:id="@+id/splashFragment"
         android:name="com.example.toptasks.ui.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_authentication"
-            app:destination="@id/authentication" />
+            app:destination="@id/authentication"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
-    <navigation android:id="@+id/authentication"
+    <navigation
+        android:id="@+id/authentication"
         app:startDestination="@id/loginFragment">
         <fragment
             android:id="@+id/loginFragment"
