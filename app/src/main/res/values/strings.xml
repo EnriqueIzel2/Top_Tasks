@@ -30,4 +30,7 @@
     <string name="fragment_register_password_text">Senha</string>
     <string name="fragment_register_password_hint">Digite sua senha</string>
     <string name="fragment_register_btn_createAccount">Criar conta</string>
+
+    <!--  Fragment Home  -->
+    <string name="fragment_home_btn_logout">Ícone do botão logout</string>
 </resources>
