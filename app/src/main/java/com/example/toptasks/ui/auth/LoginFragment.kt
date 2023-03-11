@@ -29,6 +29,10 @@ class LoginFragment : Fragment() {
   }
 
   private fun initListenersAndNavigation() {
+    binding.btnLogin.setOnClickListener {
+      navToHome()
+    }
+
     binding.loginCreateAccount.setOnClickListener {
       navToCreateAccount()
     }
@@ -36,6 +40,10 @@ class LoginFragment : Fragment() {
     binding.loginRecoverAccount.setOnClickListener {
       navToRecoverAccount()
     }
+  }
+
+  private fun navToHome() {
+    findNavController().navigate(R.id.action_global_homeFragment)
   }
 
   private fun navToCreateAccount() {
