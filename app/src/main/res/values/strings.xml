@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Top Tasks</string>
 
+    <!--  Status Task  -->
+    <string name="status_task_todo">A Fazer</string>
+    <string name="status_task_doing">Fazendo</string>
+    <string name="status_task_done">Feito</string>
+
+    <!--  Fragment Splash  -->
     <string name="splash_fragment_description">Logo do aplicativo</string>
 
+    <!--  Fragment Login  -->
     <string name="fragment_login_email_text">E-mail</string>
     <string name="fragment_login_email_hint">Digite seu e-mail</string>
     <string name="fragment_login_senha_text">Senha</string>
@@ -11,11 +18,13 @@
     <string name="fragment_login_criar_conta_text">Criar conta</string>
     <string name="fragment_login_recuperar_senha_text">Recuperar senha</string>
 
+    <!--  Fragment Recover Account  -->
     <string name="fragment_recover_account_description">Informe seu e-mail cadastrado para receber o link de recuperação de senha</string>
     <string name="fragment_recover_account_email_text">E-mail</string>
     <string name="fragment_recover_account_email_hint">Digite seu e-mail</string>
     <string name="fragment_recover_account_btn_getLink">Receber link</string>
 
+    <!--  Fragment Register  -->
     <string name="fragment_register_email_text">E-mail</string>
     <string name="fragment_register_email_hint">Digite seu e-mail</string>
     <string name="fragment_register_password_text">Senha</string>
