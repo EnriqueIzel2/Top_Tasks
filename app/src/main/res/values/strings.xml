@@ -33,4 +33,13 @@
 
     <!--  Fragment Home  -->
     <string name="fragment_home_btn_logout">Ícone do botão logout</string>
+
+    <!--  Fragment FormTask  -->
+    <string name="fragment_formTask_textView_descricao">Descrição</string>
+    <string name="fragment_formTask_editText_criarTarefa">Criar nova atividade</string>
+    <string name="fragment_formTask_text_statusTask">Status</string>
+    <string name="fragment_formTask_radioBtn_todo">A Fazer</string>
+    <string name="fragment_formTask_radioBtn_doing">Fazendo</string>
+    <string name="fragment_formTask_radioBtn_done">Feito</string>
+    <string name="fragment_formTask_btn_saveTask">Salvar</string>
 </resources>
