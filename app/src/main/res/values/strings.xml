@@ -42,4 +42,7 @@
     <string name="fragment_formTask_radioBtn_doing">Fazendo</string>
     <string name="fragment_formTask_radioBtn_done">Feito</string>
     <string name="fragment_formTask_btn_saveTask">Salvar</string>
+
+    <!--  Fragment Todo  -->
+    <string name="fragment_FAB_contentDescription">Botão adicionar tarefa</string>
 </resources>
