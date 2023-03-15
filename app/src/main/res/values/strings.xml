@@ -19,10 +19,11 @@
     <string name="fragment_login_recuperar_senha_text">Recuperar senha</string>
 
     <!--  Fragment Recover Account  -->
-    <string name="fragment_recover_account_description">Informe seu e-mail cadastrado para receber o link de recuperação de senha</string>
-    <string name="fragment_recover_account_email_text">E-mail</string>
-    <string name="fragment_recover_account_email_hint">Digite seu e-mail</string>
-    <string name="fragment_recover_account_btn_getLink">Receber link</string>
+    <string name="fragment_recoverAccount_description">Informe seu e-mail cadastrado para receber o link de recuperação de senha</string>
+    <string name="fragment_recoverAccount_email_text">E-mail</string>
+    <string name="fragment_recoverAccount_email_hint">Digite seu e-mail</string>
+    <string name="fragment_recoverAccount_btn_getLink">Receber link</string>
+    <string name="fragment_recoverAccount_appBar_title">Recuperar Conta</string>
 
     <!--  Fragment Register  -->
     <string name="fragment_register_email_text">E-mail</string>
@@ -30,6 +31,7 @@
     <string name="fragment_register_password_text">Senha</string>
     <string name="fragment_register_password_hint">Digite sua senha</string>
     <string name="fragment_register_btn_createAccount">Criar conta</string>
+    <string name="fragment_register_appBar_title">Criar Conta</string>
 
     <!--  Fragment Home  -->
     <string name="fragment_home_btn_logout">Ícone do botão logout</string>
@@ -42,6 +44,7 @@
     <string name="fragment_formTask_radioBtn_doing">Fazendo</string>
     <string name="fragment_formTask_radioBtn_done">Feito</string>
     <string name="fragment_formTask_btn_saveTask">Salvar</string>
+    <string name="fragment_formTask_appBar_title">Nova Tarefa</string>
 
     <!--  Fragment Todo  -->
     <string name="fragment_FAB_contentDescription">Botão adicionar tarefa</string>
