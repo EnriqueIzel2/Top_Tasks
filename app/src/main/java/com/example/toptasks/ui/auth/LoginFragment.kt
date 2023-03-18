@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.toptasks.R
@@ -30,7 +31,7 @@ class LoginFragment : Fragment() {
 
   private fun initListenersAndNavigation() {
     binding.btnLogin.setOnClickListener {
-      navToHome()
+      handleNavigation()
     }
 
     binding.loginCreateAccount.setOnClickListener {
@@ -39,6 +40,21 @@ class LoginFragment : Fragment() {
 
     binding.loginRecoverAccount.setOnClickListener {
       navToRecoverAccount()
+    }
+  }
+
+  private fun handleNavigation() {
+    val email = binding.loginEditTextEmail.text.toString().trim()
+    val password = binding.loginEditTextPassword.text.toString().trim()
+
+    if (email.isNotEmpty()) {
+      if (password.isNotEmpty()) {
+        navToHome()
+      } else {
+        Toast.makeText(requireContext(), "Digite sua senha", Toast.LENGTH_SHORT).show()
+      }
+    } else {
+      Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
     }
   }
 
