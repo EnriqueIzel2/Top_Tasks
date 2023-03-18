@@ -24,6 +24,7 @@
             android:textColor="@color/white" />
 
         <EditText
+            android:id="@+id/login_editText_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -41,6 +42,7 @@
             android:textColor="@color/white" />
 
         <EditText
+            android:id="@+id/login_editText_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
