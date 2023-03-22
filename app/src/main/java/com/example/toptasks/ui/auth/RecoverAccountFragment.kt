@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.toptasks.R
 import com.example.toptasks.databinding.FragmentRecoverAccountBinding
 import com.example.toptasks.utils.initToolbar
+import com.example.toptasks.utils.showBottomSheet
 
 class RecoverAccountFragment : Fragment() {
 
@@ -41,7 +43,7 @@ class RecoverAccountFragment : Fragment() {
     if (email.isNotEmpty()) {
       Toast.makeText(requireContext(), "Certo", Toast.LENGTH_SHORT).show()
     } else {
-      Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+      showBottomSheet(message = R.string.fragment_recoverAccount_warning_email)
     }
   }
 
