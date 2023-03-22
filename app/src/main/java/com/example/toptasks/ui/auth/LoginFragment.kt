@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.toptasks.R
 import com.example.toptasks.databinding.FragmentLoginBinding
+import com.example.toptasks.utils.showBottomSheet
 
 class LoginFragment : Fragment() {
 
@@ -31,7 +31,7 @@ class LoginFragment : Fragment() {
 
   private fun initListenersAndNavigation() {
     binding.btnLogin.setOnClickListener {
-      handleNavigation()
+      handleDataNavigation()
     }
 
     binding.loginCreateAccount.setOnClickListener {
@@ -43,7 +43,7 @@ class LoginFragment : Fragment() {
     }
   }
 
-  private fun handleNavigation() {
+  private fun handleDataNavigation() {
     val email = binding.loginEditTextEmail.text.toString().trim()
     val password = binding.loginEditTextPassword.text.toString().trim()
 
@@ -51,10 +51,10 @@ class LoginFragment : Fragment() {
       if (password.isNotEmpty()) {
         navToHome()
       } else {
-        Toast.makeText(requireContext(), "Digite sua senha", Toast.LENGTH_SHORT).show()
+        showBottomSheet(message = R.string.fragment_login_warning_password)
       }
     } else {
-      Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+      showBottomSheet(message = R.string.fragment_login_warning_email)
     }
   }
 
