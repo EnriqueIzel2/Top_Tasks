@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.toptasks.R
 import com.example.toptasks.databinding.FragmentFormTaskBinding
 import com.example.toptasks.utils.initToolbar
+import com.example.toptasks.utils.showBottomSheet
 
 class FormTaskFragment : Fragment() {
 
@@ -40,7 +42,7 @@ class FormTaskFragment : Fragment() {
     if (description.isNotEmpty()) {
       Toast.makeText(requireContext(), "Tudo certo", Toast.LENGTH_SHORT).show()
     } else {
-      Toast.makeText(requireContext(), "Preencha a descrição da atividade", Toast.LENGTH_SHORT).show()
+      showBottomSheet(message = R.string.fragment_formTask_warning_description)
     }
   }
 
