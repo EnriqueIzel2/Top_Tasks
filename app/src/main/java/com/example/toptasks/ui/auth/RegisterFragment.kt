@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.toptasks.R
 import com.example.toptasks.databinding.FragmentRegisterBinding
 import com.example.toptasks.utils.initToolbar
+import com.example.toptasks.utils.showBottomSheet
 
 class RegisterFragment : Fragment() {
 
@@ -42,10 +44,10 @@ class RegisterFragment : Fragment() {
       if (password.isNotEmpty()) {
         Toast.makeText(requireContext(), "Certo", Toast.LENGTH_SHORT).show()
       } else {
-        Toast.makeText(requireContext(), "Preencha uma senha", Toast.LENGTH_SHORT).show()
+        showBottomSheet(message = R.string.fragment_register_warning_password)
       }
     } else {
-      Toast.makeText(requireContext(), "Preencha um email válido", Toast.LENGTH_SHORT).show()
+      showBottomSheet(message = R.string.fragment_register_warning_email)
     }
   }
 
