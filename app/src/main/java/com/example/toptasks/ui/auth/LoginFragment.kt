@@ -51,10 +51,10 @@ class LoginFragment : Fragment() {
       if (password.isNotEmpty()) {
         navToHome()
       } else {
-        showBottomSheet(message = R.string.fragment_login_warning_password)
+        showBottomSheet(message = getString(R.string.fragment_login_warning_password))
       }
     } else {
-      showBottomSheet(message = R.string.fragment_login_warning_email)
+      showBottomSheet(message = getString(R.string.fragment_login_warning_email))
     }
   }
 

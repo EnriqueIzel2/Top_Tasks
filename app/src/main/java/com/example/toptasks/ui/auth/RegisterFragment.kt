@@ -44,10 +44,10 @@ class RegisterFragment : Fragment() {
       if (password.isNotEmpty()) {
         Toast.makeText(requireContext(), "Certo", Toast.LENGTH_SHORT).show()
       } else {
-        showBottomSheet(message = R.string.fragment_register_warning_password)
+        showBottomSheet(message = getString(R.string.fragment_register_warning_password))
       }
     } else {
-      showBottomSheet(message = R.string.fragment_register_warning_email)
+      showBottomSheet(message = getString(R.string.fragment_register_warning_email))
     }
   }
 

@@ -42,7 +42,7 @@ class FormTaskFragment : Fragment() {
     if (description.isNotEmpty()) {
       Toast.makeText(requireContext(), "Tudo certo", Toast.LENGTH_SHORT).show()
     } else {
-      showBottomSheet(message = R.string.fragment_formTask_warning_description)
+      showBottomSheet(message = getString(R.string.fragment_formTask_warning_description))
     }
   }
 
