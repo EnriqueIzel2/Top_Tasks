@@ -25,14 +25,12 @@
 
         <EditText
             android:id="@+id/login_editText_email"
+            style="@style/EditTextTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"
-            android:hint="@string/fragment_login_email_hint"
             android:autofillHints="emailAddress"
-            android:inputType="textEmailAddress"
-            android:padding="16dp" />
+            android:hint="@string/fragment_login_email_hint"
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
@@ -43,24 +41,21 @@
 
         <EditText
             android:id="@+id/login_editText_password"
+            style="@style/EditTextTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:background="@drawable/bg_edit_text"
-            android:hint="@string/fragment_login_senha_hint"
-            android:inputType="textPassword"
             android:autofillHints="password"
-            android:padding="16dp" />
+            android:hint="@string/fragment_login_senha_hint"
+            android:inputType="textPassword" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_login"
+            style="@style/ButtonTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_button"
-            android:text="@string/fragment_login_btn_login_text"
-            android:textColor="@color/default_color"
-            app:backgroundTint="@null" />
+            android:text="@string/fragment_login_btn_login_text" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,8 +75,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textAlignment="textEnd"
-                android:text="@string/fragment_login_recuperar_senha_text" />
+                android:text="@string/fragment_login_recuperar_senha_text"
+                android:textAlignment="textEnd" />
         </LinearLayout>
 
         <ProgressBar

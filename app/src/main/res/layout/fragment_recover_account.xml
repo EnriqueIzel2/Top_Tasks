@@ -43,9 +43,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="@string/fragment_recoverAccount_description"
                 android:textAlignment="center"
-                android:layout_marginTop="16dp"
                 android:textColor="@color/white" />
 
             <TextView
@@ -57,24 +57,21 @@
 
             <EditText
                 android:id="@+id/recoverAccount_editText_email"
+                style="@style/EditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:autofillHints="emailAddress"
-                android:background="@drawable/bg_edit_text"
                 android:hint="@string/fragment_recoverAccount_email_hint"
-                android:inputType="textEmailAddress"
-                android:padding="16dp" />
+                android:inputType="textEmailAddress" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/recoverAccount_btn_receiveLink"
+                style="@style/ButtonTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_button"
-                android:text="@string/fragment_recoverAccount_btn_getLink"
-                android:textColor="@color/default_color"
-                app:backgroundTint="@null" />
+                android:text="@string/fragment_recoverAccount_btn_getLink" />
 
             <ProgressBar
                 android:id="@+id/recoverAccount_progressBar"
@@ -82,9 +79,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
+                android:indeterminateTint="@color/white"
                 android:visibility="invisible"
-                tools:visibility="visible"
-                android:indeterminateTint="@color/white" />
+                tools:visibility="visible" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

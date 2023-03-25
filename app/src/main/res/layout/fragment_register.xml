@@ -49,14 +49,13 @@
 
             <EditText
                 android:id="@+id/register_editText_email"
+                style="@style/EditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:autofillHints="emailAddress"
-                android:background="@drawable/bg_edit_text"
                 android:hint="@string/fragment_register_email_hint"
-                android:inputType="textEmailAddress"
-                android:padding="16dp" />
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -67,24 +66,21 @@
 
             <EditText
                 android:id="@+id/register_editText_password"
+                style="@style/EditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:autofillHints="password"
-                android:background="@drawable/bg_edit_text"
                 android:hint="@string/fragment_register_password_hint"
-                android:inputType="textPassword"
-                android:padding="16dp" />
+                android:inputType="textPassword" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/register_btn_create_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_button"
-                android:text="@string/fragment_register_btn_createAccount"
-                android:textColor="@color/default_color"
-                app:backgroundTint="@null" />
+                style="@style/ButtonTheme"
+                android:text="@string/fragment_register_btn_createAccount" />
 
             <ProgressBar
                 android:id="@+id/register_progressBar"
