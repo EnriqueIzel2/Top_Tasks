@@ -58,4 +58,11 @@
     <!--  Bottom Sheet  -->
     <string name="bottomSheet_title">Atenção</string>
     <string name="bottomSheet_button_text">Entendi</string>
+
+    <!--  Item Task  -->
+    <string name="itemTask_icBack_description">Ícone voltar atividade</string>
+    <string name="itemTask_icForward_description">Ícone de avançar atividade</string>
+    <string name="itemTask_btnDelete_text">Remover</string>
+    <string name="itemTask_btnEdit_text">Editar</string>
+    <string name="itemTask_btnDetails_text">Detalhes</string>
 </resources>
