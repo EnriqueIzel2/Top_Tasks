@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="default_color">#03B6FC</color>
+    <color name="delete_color">#FF4C3B</color>
+    <color name="details_color">#04D5C1</color>
 </resources>
