@@ -6,13 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.toptasks.R
+import com.example.toptasks.data.model.Status
+import com.example.toptasks.data.model.Task
 import com.example.toptasks.databinding.FragmentTodoBinding
+import com.example.toptasks.ui.adapter.TaskAdapter
 
 class TodoFragment : Fragment() {
 
   private var _binding: FragmentTodoBinding? = null
   private val binding get() = _binding!!
+
+  private lateinit var taskAdapter: TaskAdapter
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +32,8 @@ class TodoFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     initNavigationListeners()
+
+    initRecyclerView(generateFakeTasks())
   }
 
   private fun initNavigationListeners() {
@@ -33,6 +41,21 @@ class TodoFragment : Fragment() {
       findNavController().navigate(R.id.action_homeFragment_to_formTaskFragment)
     }
   }
+
+  private fun initRecyclerView(taskList: List<Task>) {
+    taskAdapter = TaskAdapter(taskList)
+
+    binding.fragmentTodoRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+    binding.fragmentTodoRecyclerView.setHasFixedSize(true)
+    binding.fragmentTodoRecyclerView.adapter = taskAdapter
+  }
+
+  private fun generateFakeTasks() = listOf(
+    Task("0", "Criar task", Status.TODO),
+    Task("1", "Alterar uma task", Status.TODO),
+    Task("2", "Comprar pão", Status.TODO),
+    Task("3", "Fazer pudim", Status.TODO),
+  )
 
   override fun onDestroy() {
     super.onDestroy()
