@@ -53,7 +53,6 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/item_task_btnEdit"
                 app:layout_constraintEnd_toStartOf="@+id/item_task_btnEdit"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/item_task_btnEdit" />
@@ -63,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/itemTask_btnEdit_text"
                 android:textAllCaps="false"
