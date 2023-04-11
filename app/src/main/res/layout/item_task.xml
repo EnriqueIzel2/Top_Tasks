@@ -32,7 +32,7 @@
                 tools:text="Criar uma atividade" />
 
             <ImageButton
-                android:id="@+id/item_task_icForward"
+                android:id="@+id/item_task_icBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -88,7 +88,7 @@
                 app:layout_constraintTop_toTopOf="@+id/item_task_btnEdit" />
 
             <ImageButton
-                android:id="@+id/item_task_icBack"
+                android:id="@+id/item_task_icForward"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
