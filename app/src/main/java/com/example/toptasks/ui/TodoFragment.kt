@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.toptasks.R
@@ -43,12 +44,36 @@ class TodoFragment : Fragment() {
   }
 
   private fun initRecyclerView(taskList: List<Task>) {
-    taskAdapter = TaskAdapter(requireContext(), taskList)
+    val recyclerView = binding.fragmentTodoRecyclerView
+    taskAdapter = TaskAdapter(requireContext(), taskList) { task, option ->
+      optionSelected(task, option)
+    }
 
-    binding.fragmentTodoRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-    binding.fragmentTodoRecyclerView.setHasFixedSize(true)
-    binding.fragmentTodoRecyclerView.adapter = taskAdapter
+    recyclerView.layoutManager = LinearLayoutManager(requireContext())
+    recyclerView.setHasFixedSize(true)
+    recyclerView.adapter = taskAdapter
   }
+
+  private fun optionSelected(task: Task, option: Int) {
+    when(option) {
+      TaskAdapter.SELECT_REMOVE -> {
+        Toast.makeText(requireContext(), "Deletando", Toast.LENGTH_SHORT).show()
+      }
+
+      TaskAdapter.SELECT_EDIT -> {
+        Toast.makeText(requireContext(), "Editando", Toast.LENGTH_SHORT).show()
+      }
+
+      TaskAdapter.SELECT_DETAILS -> {
+        Toast.makeText(requireContext(), "Editando", Toast.LENGTH_SHORT).show()
+      }
+
+      TaskAdapter.SELECT_NEXT -> {
+        Toast.makeText(requireContext(), "Proximo", Toast.LENGTH_SHORT).show()
+      }
+    }
+  }
+
 
   private fun generateFakeTasks() = listOf(
     Task("0", "Criar task", Status.TODO),
