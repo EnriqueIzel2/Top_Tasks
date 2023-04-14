@@ -30,12 +30,13 @@ class DoneFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    initRecyclerView(generateFakeTasks())
+    initRecyclerView()
+    generateFakeTasks()
   }
 
-  private fun initRecyclerView(taskList: List<Task>) {
+  private fun initRecyclerView() {
     val recyclerView = binding.fragmentDoneRecyclerView
-    taskAdapter = TaskAdapter(requireContext(), taskList) { task, option ->
+    taskAdapter = TaskAdapter(requireContext()) { task, option ->
       optionSelected(task, option)
     }
 
@@ -45,7 +46,7 @@ class DoneFragment : Fragment() {
   }
 
   private fun optionSelected(task: Task, option: Int) {
-    when(option) {
+    when (option) {
       TaskAdapter.SELECT_BACK -> {
         Toast.makeText(requireContext(), "Voltando", Toast.LENGTH_SHORT).show()
       }
@@ -64,12 +65,16 @@ class DoneFragment : Fragment() {
     }
   }
 
-  private fun generateFakeTasks() = listOf(
-    Task("0", "Criar task", Status.DONE),
-    Task("1", "Alterar uma task", Status.DONE),
-    Task("2", "Comprar pão", Status.DONE),
-    Task("3", "Fazer pudim", Status.DONE),
-  )
+  private fun generateFakeTasks() {
+    val taskList = listOf(
+      Task("0", "Criar task", Status.DONE),
+      Task("1", "Alterar uma task", Status.DONE),
+      Task("2", "Comprar pão", Status.DONE),
+      Task("3", "Fazer pudim", Status.DONE),
+    )
+
+    taskAdapter.submitList(taskList)
+  }
 
   override fun onDestroy() {
     super.onDestroy()

@@ -34,7 +34,8 @@ class TodoFragment : Fragment() {
 
     initNavigationListeners()
 
-    initRecyclerView(generateFakeTasks())
+    initRecyclerView()
+    generateFakeTasks()
   }
 
   private fun initNavigationListeners() {
@@ -43,9 +44,9 @@ class TodoFragment : Fragment() {
     }
   }
 
-  private fun initRecyclerView(taskList: List<Task>) {
+  private fun initRecyclerView() {
     val recyclerView = binding.fragmentTodoRecyclerView
-    taskAdapter = TaskAdapter(requireContext(), taskList) { task, option ->
+    taskAdapter = TaskAdapter(requireContext()) { task, option ->
       optionSelected(task, option)
     }
 
@@ -55,7 +56,7 @@ class TodoFragment : Fragment() {
   }
 
   private fun optionSelected(task: Task, option: Int) {
-    when(option) {
+    when (option) {
       TaskAdapter.SELECT_REMOVE -> {
         Toast.makeText(requireContext(), "Deletando", Toast.LENGTH_SHORT).show()
       }
@@ -75,12 +76,16 @@ class TodoFragment : Fragment() {
   }
 
 
-  private fun generateFakeTasks() = listOf(
-    Task("0", "Criar task", Status.TODO),
-    Task("1", "Alterar uma task", Status.TODO),
-    Task("2", "Comprar pão", Status.TODO),
-    Task("3", "Fazer pudim", Status.TODO),
-  )
+  private fun generateFakeTasks() {
+    val taskList = listOf(
+      Task("0", "Criar task", Status.TODO),
+      Task("1", "Alterar uma task", Status.TODO),
+      Task("2", "Comprar pão", Status.TODO),
+      Task("3", "Fazer pudim", Status.TODO),
+    )
+
+    taskAdapter.submitList(taskList)
+  }
 
   override fun onDestroy() {
     super.onDestroy()
