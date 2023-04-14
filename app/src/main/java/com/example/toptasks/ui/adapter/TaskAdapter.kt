@@ -15,7 +15,6 @@ import com.example.toptasks.databinding.ItemTaskBinding
 
 class TaskAdapter(
   private val context: Context,
-  private val taskList: List<Task>,
   private val taskSelected: (Task, Int) -> Unit
 ) : ListAdapter<Task, TaskAdapter.ViewHolder>(DIFF_CALLBACK) {
 
@@ -53,7 +52,7 @@ class TaskAdapter(
     val btnDelete = holder.binding.itemTaskBtnDelete
     val btnEdit = holder.binding.itemTaskBtnEdit
     val btnDetails = holder.binding.itemTaskBtnDetails
-    val task = taskList[position]
+    val task = getItem(position)
 
     holder.binding.itemTaskDescription.text = task.description
 
