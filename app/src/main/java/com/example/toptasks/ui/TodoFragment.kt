@@ -1,18 +1,20 @@
 package com.example.toptasks.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.toptasks.R
 import com.example.toptasks.data.model.Status
 import com.example.toptasks.data.model.Task
 import com.example.toptasks.databinding.FragmentTodoBinding
 import com.example.toptasks.ui.adapter.TaskAdapter
+import com.example.toptasks.ui.adapter.TaskTopAdapter
 
 class TodoFragment : Fragment() {
 
@@ -20,6 +22,7 @@ class TodoFragment : Fragment() {
   private val binding get() = _binding!!
 
   private lateinit var taskAdapter: TaskAdapter
+  private lateinit var taskTopAdapter: TaskTopAdapter
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
@@ -46,13 +49,20 @@ class TodoFragment : Fragment() {
 
   private fun initRecyclerView() {
     val recyclerView = binding.fragmentTodoRecyclerView
+
+    taskTopAdapter = TaskTopAdapter { task, option ->
+      optionSelected(task, option)
+    }
+
     taskAdapter = TaskAdapter(requireContext()) { task, option ->
       optionSelected(task, option)
     }
 
+    val concatAdapter = ConcatAdapter(taskTopAdapter, taskAdapter)
+
     recyclerView.layoutManager = LinearLayoutManager(requireContext())
     recyclerView.setHasFixedSize(true)
-    recyclerView.adapter = taskAdapter
+    recyclerView.adapter = concatAdapter
   }
 
   private fun optionSelected(task: Task, option: Int) {
@@ -77,6 +87,10 @@ class TodoFragment : Fragment() {
 
 
   private fun generateFakeTasks() {
+    val taskTopList = listOf(
+      Task("0", "Tarefa do topo", Status.TODO),
+    )
+
     val taskList = listOf(
       Task("0", "Criar task", Status.TODO),
       Task("1", "Alterar uma task", Status.TODO),
@@ -84,6 +98,7 @@ class TodoFragment : Fragment() {
       Task("3", "Fazer pudim", Status.TODO),
     )
 
+    taskTopAdapter.submitList(taskTopList)
     taskAdapter.submitList(taskList)
   }
 
